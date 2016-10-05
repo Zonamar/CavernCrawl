@@ -18,7 +18,9 @@ public class CavernCrawl {
         
 
         // Init Basic Classes
-        
+        InitSystem gameSystem = InitSystem.getInstance();
+        gameSystem.InitGame();
+               
         
         // Open Start Menu
                 // Start Solo Game

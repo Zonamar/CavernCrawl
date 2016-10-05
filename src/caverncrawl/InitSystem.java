@@ -12,6 +12,15 @@ package caverncrawl;
 public class InitSystem {
     
     private InitSystem() {
+        
+        
+    }
+    
+    public void InitGame()
+    {
+        
+        
+        
     }
     
     public static InitSystem getInstance() {
@@ -22,4 +31,6 @@ public class InitSystem {
 
         private static final InitSystem INSTANCE = new InitSystem();
     }
+    
+    
 }
