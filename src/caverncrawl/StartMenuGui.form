@@ -111,10 +111,8 @@
     <Component class="javax.swing.JComboBox" name="jComboBox1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="3">
+          <StringArray count="1">
             <StringItem index="0" value="New Character"/>
-            <StringItem index="1" value="Zonamar : Human : Wizard : LVL 45"/>
-            <StringItem index="2" value="Haikuna : Dwarf : Fighter : LVL 13"/>
           </StringArray>
         </Property>
       </Properties>

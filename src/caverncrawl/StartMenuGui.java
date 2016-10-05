@@ -11,13 +11,19 @@ package caverncrawl;
  */
 public class StartMenuGui extends javax.swing.JFrame {
 
+    
     /**
      * Creates new form StartMenuGui
      */
     public StartMenuGui() {
         initComponents();
     }
-
+    
+    public void AddCharacter(String newCharacter)
+    {
+        jComboBox1.addItem(newCharacter);
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -54,7 +60,7 @@ public class StartMenuGui extends javax.swing.JFrame {
 
         jLabel2.setText("Which character would you like to play?");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New Character", "Zonamar : Human : Wizard : LVL 45", "Haikuna : Dwarf : Fighter : LVL 13" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New Character" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -110,7 +116,9 @@ public class StartMenuGui extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-                // TODO add your handling code here:
+        this.setVisible(false);
+        
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
