@@ -23,19 +23,22 @@ public class CavernCrawl {
                
         
         // Open Start Menu
-                // Start Solo Game
-                    // New Character            Character Object Created 
-                    // Load Character           by each of these options
-                // Start Multiplayer Game
-                    // Host
-                        // Add Multiplayer logic
-                    // Join
-                        // Add multiplayer logic
+        gameSystem.StartMenu();
+               
         
-        
-        // Init Solo Game
+        if (gameSystem.isSinglePlayer() )
+        {
             
-        // Start solo game  (pass Character object)
+         // Init Solo Game
+            
+        // Start solo game  (pass Character object)   
+        }
+        else
+        {
+            // Host or Join?
+            
+        }
+        
         
         
         
