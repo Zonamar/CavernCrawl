@@ -11,4 +11,18 @@ package caverncrawl;
  */
 public class Map {
     
+    
+    
+    boolean doesIntersect (GameLocation object1Loc, GameLocation object2Loc)
+    {
+        
+        return false;
+    }
+    
+    boolean doseIntersect (GameLocation objectLoc)
+    {
+        
+        return false;
+    }
+    
 }
