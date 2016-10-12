@@ -5,18 +5,29 @@
  */
 package caverncrawl;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author zonam_000
  */
 public class StartMenuGui extends javax.swing.JFrame {
-
+    
+    MapTile testTile;
     
     /**
      * Creates new form StartMenuGui
      */
     public StartMenuGui() {
         initComponents();
+        
+         testTile = new MapTile();
+         
+         jPanel1 = testTile;
+         
+        
+        
     }
     
     public void AddCharacter(String newCharacter)
@@ -34,12 +45,32 @@ public class StartMenuGui extends javax.swing.JFrame {
     private void initComponents() {
 
         gameType = new javax.swing.ButtonGroup();
+        fgTileImg = new javax.swing.ButtonGroup();
+        bgTileImg = new javax.swing.ButtonGroup();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
+        tileFormat1 = new javax.swing.JCheckBox();
+        tileFormat2 = new javax.swing.JCheckBox();
+        tileFormat3 = new javax.swing.JCheckBox();
+        tileFormat4 = new javax.swing.JCheckBox();
+        tileFormat5 = new javax.swing.JCheckBox();
+        tileFormat6 = new javax.swing.JCheckBox();
+        tileFormat7 = new javax.swing.JCheckBox();
+        tileFormat8 = new javax.swing.JCheckBox();
+        jLabel3 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jLabel4 = new javax.swing.JLabel();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        jRadioButton8 = new javax.swing.JRadioButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,44 +98,233 @@ public class StartMenuGui extends javax.swing.JFrame {
             }
         });
 
+        tileFormat1.setSelected(true);
+        tileFormat1.setText("1");
+        tileFormat1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tileFormat1ActionPerformed(evt);
+            }
+        });
+
+        tileFormat2.setSelected(true);
+        tileFormat2.setText("2");
+        tileFormat2.setActionCommand("2");
+        tileFormat2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tileFormat2ActionPerformed(evt);
+            }
+        });
+
+        tileFormat3.setSelected(true);
+        tileFormat3.setText("3");
+        tileFormat3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tileFormat3ActionPerformed(evt);
+            }
+        });
+
+        tileFormat4.setSelected(true);
+        tileFormat4.setText("4");
+        tileFormat4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tileFormat4ActionPerformed(evt);
+            }
+        });
+
+        tileFormat5.setSelected(true);
+        tileFormat5.setText("5");
+        tileFormat5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tileFormat5ActionPerformed(evt);
+            }
+        });
+
+        tileFormat6.setSelected(true);
+        tileFormat6.setText("6");
+        tileFormat6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tileFormat6ActionPerformed(evt);
+            }
+        });
+
+        tileFormat7.setSelected(true);
+        tileFormat7.setText("7");
+        tileFormat7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tileFormat7ActionPerformed(evt);
+            }
+        });
+
+        tileFormat8.setSelected(true);
+        tileFormat8.setText("8");
+        tileFormat8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tileFormat8ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("1111_1111_0000_0001_0000_0000_0000_0000");
+
+        jButton2.setText("Update Tile");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        fgTileImg.add(jRadioButton3);
+        jRadioButton3.setText("Black");
+
+        fgTileImg.add(jRadioButton4);
+        jRadioButton4.setText("Grass");
+
+        fgTileImg.add(jRadioButton5);
+        jRadioButton5.setText("Stone");
+
+        jLabel4.setText("Foreground");
+
+        bgTileImg.add(jRadioButton6);
+        jRadioButton6.setSelected(true);
+        jRadioButton6.setText("Black");
+
+        bgTileImg.add(jRadioButton7);
+        jRadioButton7.setText("Grass");
+
+        bgTileImg.add(jRadioButton8);
+        jRadioButton8.setText("Stone");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(43, 43, 43))
             .addGroup(layout.createSequentialGroup()
                 .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButton1)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel1)
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jRadioButton2)
+                                        .addComponent(jRadioButton1))))
+                            .addGap(138, 138, 138))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(jButton2)
+                            .addGap(18, 18, 18)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(199, 199, 199)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton1)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(57, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(tileFormat1)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(tileFormat2))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(tileFormat7)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(tileFormat6))
+                                        .addComponent(jLabel4))
+                                    .addComponent(tileFormat8))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tileFormat3)
+                                    .addComponent(tileFormat4)
+                                    .addComponent(tileFormat5))
+                                .addGap(35, 35, 35)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton3)
+                            .addComponent(jRadioButton4)
+                            .addComponent(jRadioButton5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton6)
+                            .addComponent(jRadioButton7)
+                            .addComponent(jRadioButton8))
+                        .addGap(74, 74, 74))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jRadioButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton2)
-                .addGap(31, 31, 31)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(27, 27, 27))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jRadioButton6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRadioButton7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRadioButton8))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(65, 65, 65)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jRadioButton1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton2)
+                                .addGap(31, 31, 31)
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jButton2))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(tileFormat1)
+                                            .addComponent(tileFormat2)
+                                            .addComponent(tileFormat3))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(tileFormat4)
+                                            .addComponent(tileFormat8))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(tileFormat5)
+                                            .addComponent(tileFormat6)
+                                            .addComponent(tileFormat7))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel4))
+                                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(27, 27, 27)
+                                .addComponent(jButton1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jRadioButton3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButton4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButton5)))))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -121,7 +341,42 @@ public class StartMenuGui extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
+    private void tileFormat1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tileFormat1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tileFormat1ActionPerformed
+
+    private void tileFormat2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tileFormat2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tileFormat2ActionPerformed
+
+    private void tileFormat3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tileFormat3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tileFormat3ActionPerformed
+
+    private void tileFormat4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tileFormat4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tileFormat4ActionPerformed
+
+    private void tileFormat5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tileFormat5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tileFormat5ActionPerformed
+
+    private void tileFormat6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tileFormat6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tileFormat6ActionPerformed
+
+    private void tileFormat7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tileFormat7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tileFormat7ActionPerformed
+
+    private void tileFormat8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tileFormat8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tileFormat8ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        jPanel1= testTile;        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+   /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -157,12 +412,32 @@ public class StartMenuGui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bgTileImg;
+    private javax.swing.ButtonGroup fgTileImg;
     private javax.swing.ButtonGroup gameType;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton jRadioButton7;
+    private javax.swing.JRadioButton jRadioButton8;
+    private javax.swing.JCheckBox tileFormat1;
+    private javax.swing.JCheckBox tileFormat2;
+    private javax.swing.JCheckBox tileFormat3;
+    private javax.swing.JCheckBox tileFormat4;
+    private javax.swing.JCheckBox tileFormat5;
+    private javax.swing.JCheckBox tileFormat6;
+    private javax.swing.JCheckBox tileFormat7;
+    private javax.swing.JCheckBox tileFormat8;
     // End of variables declaration//GEN-END:variables
 }
