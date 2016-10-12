@@ -316,7 +316,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="1111_1111_0000_0001_0000_0000_0000_0000"/>
+        <Property name="text" type="java.lang.String" value="11111111000000010000000000000000"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">

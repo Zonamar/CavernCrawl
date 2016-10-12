@@ -55,12 +55,14 @@ public class MapTile extends JPanel{
         updateTileInfo(_tileInfo);
         
     }
+    
     @Override 
     protected void paintComponent (Graphics g)
 { 
      super.paintComponent(g);
      //I would have image be a class variable that gets updated in your run() method
-     g.drawImage(_img, 0, 0, this); 
+     g.drawImage(_img, 0, 0, this);
+
 } 
     BufferedImage getTileImg()
     {
@@ -80,26 +82,26 @@ public class MapTile extends JPanel{
     
     private void LoadBackgroundImage()
     {
-        byte bgTileInfo = (byte)( _tileInfo >>> 16);
+        byte bgTileInfo = (byte)( _tileInfo >>> 8);
         _bgImg = null;
         String fileName = new String();
-        
+      
         
         
         switch (bgTileInfo)
              {
             case 0: 
-                    fileName = "SA1_Black.png";
+                    fileName = "C:\\Users\\zonam_000\\GitHub\\CavernCrawl\\src\\img\\SA1_Black.png";
                     break;
             case 1:
-                    fileName = "SA1_Grass.png";
+                    fileName = "img/SA1_Grass.png";
                     break;
             case 2:
-                    fileName = "SA1_Stone.png";
+                    fileName = "img/SA1_Stone.png";
                     break;
                     
             default:   
-                    fileName = "SA1_Black.png";
+                    fileName = "img/SA1_Black.png";
                     break;
                     
             
@@ -108,13 +110,15 @@ public class MapTile extends JPanel{
         try {
             _bgImg = ImageIO.read(new File(fileName));
         } catch (IOException e) {
+            System.out.print("File Read Error\n");
+            
         }
             
     }
     
     private void LoadForegroundImage()
     {
-        byte fgTileInfo = (byte)( _tileInfo >>> 24);
+        byte fgTileInfo = (byte)( _tileInfo >>> 16);
         String fileName = new String();
         _fgImg = null;
                 
@@ -122,17 +126,17 @@ public class MapTile extends JPanel{
         switch (fgTileInfo)
              {
             case 0: 
-                    fileName = "SA1_Black.png";
+                    fileName = "img/SA1_Black.png";
                     break;
             case 1:
-                    fileName = "SA1_Grass.png";
+                    fileName = "C:\\Users\\zonam_000\\GitHub\\CavernCrawl\\src\\img\\SA1_Grass.png";
                     break;
             case 2:
-                    fileName = "SA1_Stone.png";
+                    fileName = "img/SA1_Stone.png";
                     break;
                     
             default:   
-                    fileName = "SA1_Black.png";
+                    fileName = "img/SA1_Black.png";
                     break;
                     
             
@@ -140,6 +144,7 @@ public class MapTile extends JPanel{
         try {
             _fgImg = ImageIO.read(new File(fileName));
         } catch (IOException e) {
+            System.out.print("File Read Error\n");
         }
         
     }

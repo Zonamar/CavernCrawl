@@ -26,6 +26,10 @@ public class StartMenuGui extends javax.swing.JFrame {
          
          jPanel1 = testTile;
          
+         jPanel1.setVisible(true);
+         
+         
+         
         
         
     }
@@ -163,7 +167,7 @@ public class StartMenuGui extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("1111_1111_0000_0001_0000_0000_0000_0000");
+        jLabel3.setText("11111111000000010000000000000000");
 
         jButton2.setText("Update Tile");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -374,9 +378,86 @@ public class StartMenuGui extends javax.swing.JFrame {
     }//GEN-LAST:event_tileFormat8ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+        String newValue = new String();
+        
+        if (tileFormat1.isSelected())
+            newValue = "1";
+        else 
+            newValue = "0";
+        
+        if (tileFormat2.isSelected())
+            newValue = newValue + "1";
+        else 
+            newValue = newValue + "0";
+        
+        if (tileFormat3.isSelected())
+            newValue = newValue + "1";
+        else 
+            newValue = newValue + "0";
+        
+        if (tileFormat4.isSelected())
+            newValue = newValue + "1";
+        else 
+            newValue = newValue + "0";
+        
+        
+        
+        
+        if (tileFormat5.isSelected())
+            newValue = newValue + "1";
+        else 
+            newValue = newValue + "0";
+        
+        
+        if (tileFormat6.isSelected())
+            newValue = newValue + "1";
+        else 
+            newValue = newValue + "0";
+        
+        if (tileFormat7.isSelected())
+            newValue = newValue + "1";
+        else 
+            newValue = newValue + "0";
+       
+        if (tileFormat8.isSelected())
+            newValue = newValue + "1";
+        else 
+            newValue = newValue + "0";
+        
+        newValue += "0000";
+        
+        if (jRadioButton3.isSelected())
+            newValue += "00000000";
+        if (jRadioButton4.isSelected())
+            newValue += "00010000";
+        if (jRadioButton5.isSelected())
+            newValue += "00100000";
+        
+        
+        if (jRadioButton6.isSelected())
+            newValue += "000000000000";
+        if (jRadioButton7.isSelected())
+            newValue += "000100000000";
+        if (jRadioButton8.isSelected())
+            newValue += "001000000000";
+        
+        
+        
+        
+                
+        
+        jLabel3.setText(newValue);
+        
+       
+        testTile.updateTileInfo(Integer.parseInt(newValue,2));
         jPanel1= testTile;        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
-   /**
+   
+
+
+    
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
