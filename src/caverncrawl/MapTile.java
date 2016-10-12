@@ -12,8 +12,8 @@ package caverncrawl;
 public class MapTile {
     
     public enum TileFlags{
-        isPassible (0b0000_0000_0000_0000_0000_0000_0000_0001),
-        isHalfSpeed(0b0000_0000_0000_0000_0000_0000_0000_0010);
+        isPassible (0b0000_0000_0000_0000_0000_0000_0000_0001);
+        
         
         private final int _flag;
         
