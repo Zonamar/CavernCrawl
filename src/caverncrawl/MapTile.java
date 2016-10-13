@@ -55,7 +55,7 @@ public class MapTile extends JPanel{
         updateTileInfo(_tileInfo);
         
     }
-    
+    /*
     @Override 
     protected void paintComponent (Graphics g)
 { 
@@ -64,6 +64,15 @@ public class MapTile extends JPanel{
      g.drawImage(_img, 0, 0, this);
 
 } 
+*/
+    @Override 
+    public void paint(Graphics g)
+    {
+        super.paint(g);
+        g.drawImage(_img, 100, 100, null);
+        
+        
+    }
     BufferedImage getTileImg()
     {
         return _img;
@@ -91,7 +100,7 @@ public class MapTile extends JPanel{
         switch (bgTileInfo)
              {
             case 0: 
-                    fileName = "C:\\Users\\zonam_000\\GitHub\\CavernCrawl\\src\\img\\SA1_Black.png";
+                    fileName = "C:\\Users\\ZonamarPC\\GitHub\\CavernCrawl\\src\\img\\SA1_Black.png";
                     break;
             case 1:
                     fileName = "img/SA1_Grass.png";
@@ -129,7 +138,7 @@ public class MapTile extends JPanel{
                     fileName = "img/SA1_Black.png";
                     break;
             case 1:
-                    fileName = "C:\\Users\\zonam_000\\GitHub\\CavernCrawl\\src\\img\\SA1_Grass.png";
+                    fileName = "C:\\Users\\ZonamarPC\\GitHub\\CavernCrawl\\src\\img\\SA1_Grass.png";
                     break;
             case 2:
                     fileName = "img/SA1_Stone.png";

@@ -5,6 +5,7 @@
  */
 package caverncrawl;
 
+import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -25,6 +26,8 @@ public class StartMenuGui extends javax.swing.JFrame {
          testTile = new MapTile();
          
          jPanel1 = testTile;
+         
+         testTile.setBackground(Color.yellow);
          
          jPanel1.setVisible(true);
          
@@ -339,6 +342,9 @@ public class StartMenuGui extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        GameWindow.main(null);
+        
         
         this.setVisible(false);
         
