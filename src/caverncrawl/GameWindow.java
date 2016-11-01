@@ -6,19 +6,30 @@
 package caverncrawl;
 
 import java.awt.Color;
-import javax.swing.JFrame;
+import javax.swing.*;
 import javax.swing.ImageIcon;
+import java.awt.event.*;
 
 /**
  *
  * @author ZonamarPC
  */
-public class GameWindow {
-    public static void main(String[] args)
-            
+        
+
+
+public class GameWindow extends JPanel implements ActionListener {
+    
+    private Player _newPlayer;
+    private Timer gameClock;
+    
+    
+    
+    
+    public void gameStart()
     {
+        
         MapTile testTile = new MapTile();
-        Player newPlayer = new Player();
+        _newPlayer = new Player();
         
         //MapTile testTile2 = new MapTile();
         
@@ -26,14 +37,27 @@ public class GameWindow {
         j.setBounds(0,0,500,500);
         j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         j.setVisible(true);
-        j.add(testTile);
-        j.add(newPlayer);
+      //  j.add(testTile);
+        j.add(_newPlayer);
         //j.add(testTile2);
+         j.setIconImage(new ImageIcon("C:\\Users\\ZonamarPC\\GitHub\\CavernCrawl\\src\\img\\HammerAndSword.png").getImage());
+         
+         gameClock = new Timer(100,this);
+         
+         gameClock.start();
+         
+    }
+
+    
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
         
-        
-        
-        j.setIconImage(new ImageIcon("C:\\Users\\ZonamarPC\\GitHub\\CavernCrawl\\src\\img\\HammerAndSword.png").getImage());
-        
+        _newPlayer.animate();
         
     }
+    
+    
+    
+    
 }

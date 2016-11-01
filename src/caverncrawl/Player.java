@@ -22,6 +22,13 @@ public class Player extends JPanel{
     private float _moveSpeed;
     private float _rotSpeed;
     private BufferedImage _img;
+    private BufferedImage[][] _subImg;
+    final static int ROWS = 8;
+    final static int COLS = 8;
+    final static int WIDTH = 41;
+    final static int HIGHT = 42;
+    int _walkState;
+    int _facingState;
     
     public Player()
     {
@@ -29,8 +36,23 @@ public class Player extends JPanel{
         _moveSpeed = (float) 0.5;
         _rotSpeed = (float) 0.1;   
         
+        _subImg = new BufferedImage[ROWS][COLS];
+        
+        _walkState=0;
+        _facingState=2;
+        
+        
         try {
             _img = ImageIO.read(new File("C:\\Users\\ZonamarPC\\GitHub\\CavernCrawl\\src\\img\\Fother-penguin.png"));
+            
+            for(int i= 0 ; i< ROWS; i++)
+                for(int j =0; j<COLS;j++)
+                {
+                    _subImg[i][j]=_img.getSubimage(j*WIDTH,i*HIGHT,WIDTH,HIGHT);
+                                       
+                }
+            
+            
         } catch (IOException e) {
             System.out.print("File Read Error\n");
             
@@ -42,11 +64,25 @@ public class Player extends JPanel{
     public void paint(Graphics g)
     {
         super.paint(g);
-        g.drawImage(_img.getSubimage(0,0,40,40), (int)_loc.getX(), (int)_loc.getY(), null);
-        
+        g.drawImage(_subImg[0][_walkState], 50,  50, null);
+        g.drawImage(_subImg[1][_walkState], 50, 100, null);
+        g.drawImage(_subImg[2][_walkState], 50, 150, null);
+        g.drawImage(_subImg[3][_walkState], 100, 50, null);
+        g.drawImage(_subImg[4][_walkState], 100, 100, null);
+        g.drawImage(_subImg[5][_walkState], 100, 150, null);
+        g.drawImage(_subImg[6][_walkState], 150, 50, null);
+        g.drawImage(_subImg[7][_walkState], 150, 100, null);
         
     }
     
+    // probably should be moved later
+    
+    public void animate()
+    {   
+        _walkState = (_walkState +1)%8;
+        System.out.println(_walkState);
+        repaint();
+    }
     public void moveUp(float y)
     {
         _loc.moveY(y*_moveSpeed);         
