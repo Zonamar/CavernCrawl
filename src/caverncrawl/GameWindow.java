@@ -19,8 +19,11 @@ import java.awt.event.*;
 
 public class GameWindow extends JPanel implements ActionListener {
     
+    
+    private GameControler _gameControler;
+    
     private Player _newPlayer;
-    private Timer gameClock;
+    
     
     
     
@@ -42,9 +45,6 @@ public class GameWindow extends JPanel implements ActionListener {
         //j.add(testTile2);
          j.setIconImage(new ImageIcon("C:\\Users\\ZonamarPC\\GitHub\\CavernCrawl\\src\\img\\HammerAndSword.png").getImage());
          
-         gameClock = new Timer(100,this);
-         
-         gameClock.start();
          
     }
 
