@@ -9,6 +9,8 @@ import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
 import javax.swing.JPanel;
+import java.lang.ClassLoader;
+
 
 
 /**
@@ -100,26 +102,26 @@ public class MapTile extends JPanel{
         switch (bgTileInfo)
              {
             case 0: 
-                    fileName = "C:\\Users\\ZonamarPC\\GitHub\\CavernCrawl\\src\\img\\SA1_Black.png";
+                    fileName = "SA1_Black.png";
                     break;
             case 1:
-                    fileName = "img/SA1_Grass.png";
+                    fileName = "SA1_Grass.png";
                     break;
             case 2:
-                    fileName = "img/SA1_Stone.png";
+                    fileName = "SA1_Stone.png";
                     break;
                     
             default:   
-                    fileName = "img/SA1_Black.png";
+                    fileName = "SA1_Black.png";
                     break;
                     
             
              }
         
         try {
-            _bgImg = ImageIO.read(new File(fileName));
+            _bgImg = ImageIO.read(ClassLoader.getSystemResource(fileName));
         } catch (IOException e) {
-            System.out.print("File Read Error\n");
+            System.out.println("File Read Error -- "+ e.toString());
             
         }
             
@@ -135,25 +137,25 @@ public class MapTile extends JPanel{
         switch (fgTileInfo)
              {
             case 0: 
-                    fileName = "img/SA1_Black.png";
+                    fileName = "SA1_Black.png";
                     break;
             case 1:
-                    fileName = "C:\\Users\\ZonamarPC\\GitHub\\CavernCrawl\\src\\img\\SA1_Grass.png";
+                    fileName = "SA1_Grass.png";
                     break;
             case 2:
-                    fileName = "img/SA1_Stone.png";
+                    fileName = "SA1_Stone.png";
                     break;
                     
             default:   
-                    fileName = "img/SA1_Black.png";
+                    fileName = "SA1_Black.png";
                     break;
                     
             
              }
         try {
-            _fgImg = ImageIO.read(new File(fileName));
+            _fgImg = ImageIO.read(ClassLoader.getSystemResource(fileName));
         } catch (IOException e) {
-            System.out.print("File Read Error\n");
+            System.out.println("File Read Error -- "+ e.toString());
         }
         
     }

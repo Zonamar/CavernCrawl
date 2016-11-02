@@ -43,7 +43,7 @@ public class Player extends JPanel{
         
         
         try {
-            _img = ImageIO.read(new File("C:\\Users\\ZonamarPC\\GitHub\\CavernCrawl\\src\\img\\Fother-penguin.png"));
+            _img = ImageIO.read(ClassLoader.getSystemResource("Fother-penguin.png"));
             
             for(int i= 0 ; i< ROWS; i++)
                 for(int j =0; j<COLS;j++)
@@ -54,7 +54,7 @@ public class Player extends JPanel{
             
             
         } catch (IOException e) {
-            System.out.print("File Read Error\n");
+            System.out.println(" Player File Read Error -- "+ e.toString());
             
         }
             
